@@ -11,7 +11,7 @@ Simple program to limit mouse movement to specific Diablo 2 game instance.
 - Diablo 2 `window` minimizer (use space to minimize all windows)
 - Mouse locker/unlocker (use ctrl+E to lock mouse or unlock it)
 
-###Issues:
+### Issues:
 
 > **Switching Diablo 2 window instances will not set up current window as foreground window**
 > *After switching windows click on current/new window to make it foreground window*
@@ -24,5 +24,7 @@ Simple program to limit mouse movement to specific Diablo 2 game instance.
 
 __________________
 **Enjoy Diablo 2 and join our private realm!**(Polish+English)
+
 Home - https://idrealm.pl
+
 Forum - http://forum.idrealm.tk
