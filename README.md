@@ -2,6 +2,10 @@
 
 Simple program to limit mouse movement to specific Diablo 2 game instance.
 
+_________________
+Use files from D2MC `Download and Install` folder to install this simple application.
+
+
 ### Features:
 - D2MC works for multiple Diablo 2 game instances
 - Confines mouse movement to Diablo 2 `client` borders
