@@ -1,0 +1,3 @@
+Copy and paste D2MC.exe, SQLite.Interop.dll and System.Data.SQLite.dll files to your Diablo II game folder.
+
+Don't use -w or -skiptobnet parameters anywhere because D2MC.exe run Diablo II.exe with these parameters.
