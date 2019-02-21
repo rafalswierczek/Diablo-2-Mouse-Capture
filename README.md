@@ -14,12 +14,15 @@ Simple program to limit mouse movement to specific Diablo 2 game instance.
 ### Issues:
 
 > **Switching Diablo 2 window instances will not set up current window as foreground window**
+>
 > *After switching windows click on current/new window to make it foreground window*
 
 > **Starting multiple instances of this application very fast will cause problems with switching**
+>
 > *Start next instance after Diablo 2 window appears*
 
 > **Do not terminate this application process. It will close automatically after closing of all Diablo 2 instances**
+>
 > Delete ***D2MC.db*** file if you have terminated D2MC process
 
 __________________
