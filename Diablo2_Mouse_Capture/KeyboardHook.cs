@@ -140,7 +140,8 @@ namespace Diablo2_Mouse_Capture
                             break;
                     }
                 }
-                else if (vkCode == 32) // space
+
+                if (ctrlPressed && vkCode == 32) // ctrl + space
                 {
                     foreach (IntPtr d2Window in d2Windows)
                     {
