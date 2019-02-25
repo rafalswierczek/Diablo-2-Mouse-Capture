@@ -31,7 +31,7 @@ Use files from D2MC `Download and Install` folder to install this simple applica
 
 __________________
 **Enjoy Diablo 2 and join our private realm!**(Polish+English)
-
+s
 Home - https://idrealm.pl
 
-Forum - http://forum.idrealm.tk
+Forum - http://forum.idrealm.pl
