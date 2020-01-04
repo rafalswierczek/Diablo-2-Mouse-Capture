@@ -3,7 +3,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Diagnostics;
 
-namespace Diablo2_Mouse_Capture
+namespace D2MC
 {
     public static class KeyboardHook
     {

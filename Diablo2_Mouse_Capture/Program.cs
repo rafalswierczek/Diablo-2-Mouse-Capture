@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 using System.Diagnostics;
 using System.Threading;
 
-namespace Diablo2_Mouse_Capture
+namespace D2MC
 {
     public class Program
     {
@@ -19,30 +19,10 @@ namespace Diablo2_Mouse_Capture
         static void Main(string[] args)
         {
             db = new DbContext();
-            db.CreateTable();
 
             try
             {
-                var startInfo = new ProcessStartInfo()
-                {
-                    WorkingDirectory = Directory.GetCurrentDirectory(),
-                    Arguments = "-w -skiptobnet",
-                    FileName = "Diablo II.exe",
-                    WindowStyle = ProcessWindowStyle.Normal
-                };
-                Process newD2Process = Process.Start(startInfo);
-
-                var d2HandlersDB = db.FetchData();
-                Thread.Sleep(500); // Wait for Diablo II window do display and then run GetDiablo2Windows
-                var d2Handlers = WindowsMonitor.GetDiablo2Windows();
-                foreach (IntPtr hwnd in d2Handlers)
-                {
-                    if(!d2HandlersDB.Contains(hwnd))
-                    {
-                        db.InsertData(hwnd);
-                        break;
-                    }
-                }
+                Process.Start("D2MC.bat");
             }
             catch(Exception e)
             {
@@ -58,15 +38,15 @@ namespace Diablo2_Mouse_Capture
             {
                 currentProcess.Kill();
             }
-            
-            Thread remover = new Thread(new ThreadStart(WindowsMonitor.WindowClosedHandler));
+
+            Thread AppCloser = new Thread(new ThreadStart(Program.AppCloser));
+            AppCloser.Start();
+
+            Thread remover = new Thread(new ThreadStart(WindowsMonitor.WindowChangeHandler));
             remover.Start();
 
             Thread keyHook = new Thread(new ThreadStart(KeyboardHook.Hook));
             keyHook.Start();
-
-            Thread AppCloser = new Thread(new ThreadStart(Program.AppCloser));
-            AppCloser.Start();
 
             while (true)
             {
@@ -79,6 +59,8 @@ namespace Diablo2_Mouse_Capture
         {
             while (true)
             {
+                Thread.Sleep(10000);
+
                 var d2Windows = WindowsMonitor.GetDiablo2Windows();
                 if(!d2Windows.Any())
                 {
@@ -86,8 +68,6 @@ namespace Diablo2_Mouse_Capture
                     var currentProcess = Process.GetCurrentProcess();
                     currentProcess.Kill();
                 }
-
-                Thread.Sleep(2000);
             }
         }
     }

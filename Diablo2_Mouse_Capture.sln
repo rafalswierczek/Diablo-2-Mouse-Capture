@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2046
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diablo2_Mouse_Capture", "Diablo2_Mouse_Capture\Diablo2_Mouse_Capture.csproj", "{92A48694-C09D-4FE9-A4B7-54B5D47A193E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D2MC", "Diablo2_Mouse_Capture\D2MC.csproj", "{92A48694-C09D-4FE9-A4B7-54B5D47A193E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D2MC_Config", "Config\D2MC_Config.csproj", "{D15595CB-0F24-47A0-BF3E-83D07D5C5141}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{92A48694-C09D-4FE9-A4B7-54B5D47A193E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92A48694-C09D-4FE9-A4B7-54B5D47A193E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92A48694-C09D-4FE9-A4B7-54B5D47A193E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D15595CB-0F24-47A0-BF3E-83D07D5C5141}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D15595CB-0F24-47A0-BF3E-83D07D5C5141}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D15595CB-0F24-47A0-BF3E-83D07D5C5141}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D15595CB-0F24-47A0-BF3E-83D07D5C5141}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

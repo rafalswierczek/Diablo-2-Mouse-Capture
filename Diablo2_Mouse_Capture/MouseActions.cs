@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-namespace Diablo2_Mouse_Capture
+namespace D2MC
 {
     public static class MouseActions
     {

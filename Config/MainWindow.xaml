@@ -1,0 +1,40 @@
+﻿<Window x:Class="D2MC_Config.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:D2MC_Config"
+        mc:Ignorable="d"
+        Title="Diablo 2 Mouse Capture configuration" Height="350" Width="350">
+
+    <ScrollViewer>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <StackPanel x:Name="content" Grid.Row="0">
+                <TextBlock Margin="10" TextWrapping="Wrap" HorizontalAlignment="Center" FontSize="14">
+                        Find <Bold>Diablo II.exe</Bold> or <Bold>PlugY.exe</Bold> file path
+                </TextBlock>
+                <TextBlock x:Name="path" TextWrapping="Wrap">
+                </TextBlock>
+
+                <Button x:Name="findPath" Click="Click_FilePath" Margin="5,5,5,30" Padding="5">
+                    <StackPanel>
+                        <Label x:Name="findPathLabel">Browse...</Label>
+                    </StackPanel>
+                </Button>
+
+                <Button x:Name="removeParameters" Content="Remove parameters" Click="Click_RemoveParameters" Margin="5" Padding="5" Background="#FF7659" />
+
+                <Button x:Name="addParameter" Content="Add parameter (e.g. -w)" Click="Click_AddParameter" Margin="5" Padding="5" Background="#54E44F" />
+
+                <StackPanel x:Name="parameters">
+                </StackPanel>
+
+                <Button x:Name="save" Content="Save changes" Click="Click_Save" Margin="5" Padding="5" Background="#5F8FFF" />
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</Window>

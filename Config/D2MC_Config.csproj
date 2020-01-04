@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>D2MC.ico</ApplicationIcon>
+    <AssemblyName>D2MC_Config</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="D2MC.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="D2MC.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Diablo2_Mouse_Capture\D2MC.csproj" />
+  </ItemGroup>
+
+</Project>

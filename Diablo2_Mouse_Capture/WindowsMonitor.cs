@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 
-namespace Diablo2_Mouse_Capture
+namespace D2MC
 {
     public static class WindowsMonitor
     {
@@ -29,19 +30,37 @@ namespace Diablo2_Mouse_Capture
 
         #endregion
 
-        public static void WindowClosedHandler()
+        public static void WindowChangeHandler()
         {
             DbContext db = new DbContext();
             while (true)
             {
                 Program.d2Windows = db.FetchData();
-                foreach (IntPtr hwnd in Program.d2Windows)
+                var d2Handlers = GetDiablo2Windows();
+
+                if(d2Handlers.Count() > 0)
                 {
-                    if(!IsWindow(hwnd))
+                    foreach (IntPtr hwnd in d2Handlers)
                     {
-                        db.DeleteData(hwnd);
+                        if (!Program.d2Windows.Contains(hwnd))
+                        {
+                            db.InsertData(hwnd);
+                            break;
+                        }
                     }
                 }
+
+                if (Program.d2Windows.Count > 0)
+                {
+                    foreach (IntPtr hwnd in Program.d2Windows)
+                    {
+                        if (!IsWindow(hwnd))
+                        {
+                            db.DeleteData(hwnd);
+                        }
+                    }
+                }
+
                 Thread.Sleep(300);
             }
         }
@@ -52,6 +71,7 @@ namespace Diablo2_Mouse_Capture
             {
                 // Very slow approach which excludes other thrash windows with "Diablo II" caption title
                 if (GetWindowTitle(hwnd) != "Diablo II") { return false; }
+                var a = GetWindowTitle(hwnd);
                 GetWindowThreadProcessId(hwnd, out uint processId);
                 try
                 {

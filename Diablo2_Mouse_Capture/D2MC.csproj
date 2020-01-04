@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{92A48694-C09D-4FE9-A4B7-54B5D47A193E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Diablo2_Mouse_Capture</RootNamespace>
-    <AssemblyName>Diablo2_Mouse_Capture</AssemblyName>
+    <RootNamespace>D2MC</RootNamespace>
+    <AssemblyName>D2MC</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
