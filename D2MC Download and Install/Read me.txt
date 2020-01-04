@@ -1,3 +1,14 @@
-Copy and paste D2MC.exe, SQLite.Interop.dll and System.Data.SQLite.dll files to your Diablo II game folder.
+1. Copy all files to your Diablo II game folder.
 
-Don't use -w or -skiptobnet parameters anywhere because D2MC.exe run Diablo II.exe with these parameters.
+2. Make a shortcut of D2MC.exe on desktop and set it to run as administrator by default
+
+3. Edit D2MC.bat to run your Diablo II executable with parameters
+examples:
+    start "Diablo II" "Diablo II.exe" -w
+    start "Diablo II" "Diablo II.exe" -w -skiptobnet
+    start "Diablo II" "PlugY.exe" -w
+DO NOT change window name "Diablo II" after 'start' command
+
+4. Read once again this: https://github.com/rafalswierczek/Diablo-2-Mouse-Capture/blob/master/README.md
+
+5. Run D2MC shortcut and have fun!
